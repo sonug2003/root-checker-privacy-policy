@@ -241,7 +241,99 @@
             </ul>
         </div>
         
-        <h3>2.1 Detailed Data Collection by Category</h3>
+        <h3>2.3 Data Type Version History & Changes</h3>
+        <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+            <p><strong>📋 Data Collection Changes in This Version (v1.1):</strong></p>
+            <p>To ensure complete transparency, we document what data collection is NEW in this version compared to previous versions:</p>
+            
+            <p><strong>NEW Data Types in Version 1.1 (Current Pre-Release Version):</strong></p>
+            <ul>
+                <li><strong>App Set ID</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Google introduced App Set ID as a privacy-preserving identifier in newer Android versions. Firebase SDK automatically collects this for analytics attribution.</li>
+                        <li><strong>What It Is:</strong> A limited-scope identifier that groups apps from the same developer on a device (resets after 13 months of inactivity or when all apps from developer are uninstalled)</li>
+                        <li><strong>Purpose:</strong> Analytics aggregation and fraud prevention without using Advertising ID</li>
+                        <li><strong>Privacy Note:</strong> More privacy-friendly than Advertising ID - limited scope, automatic expiration</li>
+                    </ul>
+                </li>
+                <li><strong>ANR (App Not Responding) Reports</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Enhanced crash reporting in Firebase Crashlytics now includes ANR diagnostics</li>
+                        <li><strong>What It Is:</strong> Technical data when app freezes/becomes unresponsive (stack traces, thread states, memory usage at freeze time)</li>
+                        <li><strong>Purpose:</strong> Identify and fix app stability issues that cause freezing</li>
+                        <li><strong>Retention:</strong> 90 days, same as crash logs</li>
+                    </ul>
+                </li>
+                <li><strong>Network Carrier Name</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Latest Firebase Analytics SDK automatically collects carrier info for network-related crash analysis</li>
+                        <li><strong>What It Is:</strong> Your mobile network provider name (e.g., "Verizon", "T-Mobile", "Vodafone")</li>
+                        <li><strong>Purpose:</strong> Identify network-specific issues (e.g., crashes only on certain carriers)</li>
+                    </ul>
+                </li>
+                <li><strong>Device Timezone</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Firebase Analytics now collects timezone for session timing analysis</li>
+                        <li><strong>What It Is:</strong> Your device's timezone setting (e.g., "America/New_York", "Europe/London")</li>
+                        <li><strong>Purpose:</strong> Understand peak usage times and session patterns across global time zones</li>
+                    </ul>
+                </li>
+                <li><strong>Consent Preferences & Choices</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Google UMP (User Messaging Platform) SDK now implemented for GDPR/CCPA compliance</li>
+                        <li><strong>What It Is:</strong> Your consent choices (accept/decline personalized ads), consent timestamp, consent string (IAB TCF format), user region for compliance</li>
+                        <li><strong>Purpose:</strong> Store and respect your privacy preferences; comply with GDPR, CCPA, VCDPA, and other privacy laws</li>
+                        <li><strong>Retention:</strong> 13 months to meet legal record-keeping requirements</li>
+                        <li><strong>Where Stored:</strong> Google consent servers (fundingchoicesmessages.google.com)</li>
+                    </ul>
+                </li>
+                <li><strong>Ad Conversion Data</strong>
+                    <ul>
+                        <li><strong>Why Added:</strong> Updated Google AdMob SDK now tracks ad conversion events</li>
+                        <li><strong>What It Is:</strong> Whether you clicked an ad and subsequently installed/opened the advertised app</li>
+                        <li><strong>Purpose:</strong> Measure ad effectiveness for advertisers; improve ad relevance</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p><strong>Data Types from Version 1.0 (Unchanged - Existing Collection):</strong></p>
+            <ul>
+                <li>Advertising ID (GAID)</li>
+                <li>Firebase Instance ID</li>
+                <li>IP Address</li>
+                <li>Approximate location (from IP)</li>
+                <li>Device manufacturer, model, OS version</li>
+                <li>Screen resolution and size</li>
+                <li>Device language</li>
+                <li>App version and package name</li>
+                <li>Screen views and button clicks</li>
+                <li>App opens and session duration</li>
+                <li>Crash logs and error reports</li>
+                <li>Ad impressions and clicks</li>
+                <li>Network type (WiFi/mobile)</li>
+                <li>First install date</li>
+            </ul>
+            
+            <p><strong>Why These Data Types Were Added:</strong></p>
+            <ul>
+                <li><strong>SDK Updates:</strong> We updated to the latest Google AdMob (v23+) and Firebase (v32+) SDKs for security and compliance improvements</li>
+                <li><strong>Android API Targeting:</strong> Our app now targets Android SDK 35, which includes newer privacy frameworks and identifiers</li>
+                <li><strong>Compliance Requirements:</strong> GDPR/CCPA consent management (UMP) is now mandatory for apps with European users - requires consent data storage</li>
+                <li><strong>Automatic SDK Behavior:</strong> Many of these data points (App Set ID, ANR reports, carrier, timezone) are collected AUTOMATICALLY by Google's SDKs - we don't manually request them</li>
+            </ul>
+            
+            <p><strong>Impact on Your Privacy:</strong></p>
+            <ul>
+                <li><strong>More Privacy-Friendly:</strong> App Set ID is a privacy improvement over relying solely on Advertising ID (limited scope, auto-expiration)</li>
+                <li><strong>Better App Quality:</strong> ANR reports help us fix freezing issues you might experience</li>
+                <li><strong>Your Consent Honored:</strong> UMP consent system ensures your privacy choices are respected across sessions</li>
+                <li><strong>Same Opt-Out Rights:</strong> You can still opt-out of personalized ads through Privacy Settings or device settings (see Section 10.2)</li>
+            </ul>
+            
+            <p><strong>No Sensitive Data:</strong> These new data types do NOT include sensitive personal information. We still do NOT collect: names, emails, phone numbers, precise GPS location, contacts, photos, files, browsing history, biometric data, health data, or financial information.</p>
+        </div>
+        
+        <h3>2.4 Detailed Data Collection by Category</h3>
         <table>
             <tr>
                 <th>Data Type</th>
@@ -352,7 +444,41 @@
             </tr>
         </table>
         
-        <h3>4.2 Why AD_ID Permission is Needed (Android 13+)</h3>
+        <h3>4.2 Permission Version History & Changes</h3>
+        <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+            <p><strong>📋 Permission Changes in This Version (v1.1):</strong></p>
+            <p>We want to be transparent about permission changes between app versions. Here's what's new:</p>
+            
+            <p><strong>NEW in Version 1.1 (Current Version):</strong></p>
+            <ul>
+                <li><strong>AD_ID Permission Added</strong> (com.google.android.gms.permission.AD_ID)
+                    <ul>
+                        <li><strong>Why Added:</strong> Google made this permission mandatory starting Android 13 (API 33) for apps that use Advertising ID. Our app targets SDK 35, so we must declare this permission.</li>
+                        <li><strong>What Changed:</strong> In previous versions, Advertising ID was automatically accessible. Now, explicit permission declaration is required by Android OS.</li>
+                        <li><strong>Impact on You:</strong> No behavioral change - we've always used Advertising ID for ads. This is now just formally declared as required by Android 13+ regulations.</li>
+                        <li><strong>Your Control:</strong> You can still opt-out of personalized ads through device settings or in-app Privacy Settings (see Section 10.2)</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p><strong>Permissions from Version 1.0 (Unchanged):</strong></p>
+            <ul>
+                <li><strong>INTERNET</strong> - Required for ads and analytics (no change)</li>
+                <li><strong>ACCESS_NETWORK_STATE</strong> - Required to check network connectivity (no change)</li>
+            </ul>
+            
+            <p><strong>Why This Permission Was Added:</strong></p>
+            <ul>
+                <li>Android 13+ (API 33) introduced <strong>mandatory permission declaration</strong> for accessing Advertising ID</li>
+                <li>Apps targeting SDK 33+ <strong>cannot access Advertising ID without explicitly declaring AD_ID permission</strong></li>
+                <li>This is a <strong>Google Play policy requirement</strong>, not our choice</li>
+                <li>We've always used Advertising ID for AdMob ads - this permission just formalizes what was automatic before</li>
+            </ul>
+            
+            <p><strong>No New Data Collection:</strong> This permission does NOT introduce new data collection. We've always collected Advertising ID for ads since Version 1.0. Android 13+ now requires explicit permission declaration for existing functionality.</p>
+        </div>
+        
+        <h3>4.3 Why AD_ID Permission is Needed (Android 13+)</h3>
         <p>Starting with Android 13, Google requires apps to explicitly declare the AD_ID permission to access the Advertising ID. Here's what this means for you:</p>
         <ul>
             <li><strong>What it does:</strong> Allows the app to access your device's Advertising ID (a unique identifier for advertising purposes)</li>
@@ -366,7 +492,7 @@
             <li><strong>What happens if you opt-out:</strong> You'll still see ads, but they will be non-personalized (generic ads not based on your interests)</li>
         </ul>
         
-        <h3>4.3 Permissions NOT Requested</h3>
+        <h3>4.4 Permissions NOT Requested</h3>
         <p><strong>We do NOT request the following sensitive permissions:</strong></p>
         <ul>
             <li><strong>No Storage Permission:</strong> We don't access your files, photos, or media</li>
@@ -445,16 +571,33 @@
                 <li><strong>firebaseinstallations.googleapis.com</strong> - Firebase instance ID management</li>
             </ul>
             
+            <p><strong>User Messaging Platform (UMP) / Consent Endpoints:</strong></p>
+            <ul>
+                <li><strong>fundingchoicesmessages.google.com</strong> - Consent dialog UI and user consent preferences</li>
+                <li><strong>adssettings.google.com</strong> - Ad personalization settings management</li>
+                <li><strong>googleads.g.doubleclick.net/mads/static/mad/sdk</strong> - UMP SDK resources and consent forms</li>
+            </ul>
+            
+            <p><strong>Google Services & Infrastructure Endpoints:</strong></p>
+            <ul>
+                <li><strong>gstatic.com</strong> - Static resources (images, scripts) for ads and consent dialogs</li>
+                <li><strong>googleusercontent.com</strong> - CDN content delivery for Google services</li>
+            </ul>
+            
             <p><strong>What Data is Sent to These Endpoints:</strong></p>
             <ul>
                 <li><strong>To Ad Endpoints:</strong> Advertising ID, IP address, device model, OS version, ad interaction data (clicks, views), general location (from IP)</li>
                 <li><strong>To Analytics Endpoints:</strong> Instance ID, app events (screen views, button clicks), session duration, device info, app version, crash logs</li>
+                <li><strong>To Consent Endpoints:</strong> Consent choices (accept/decline personalized ads), user location (for GDPR/regional compliance), consent timestamp, consent string (IAB TCF format)</li>
+                <li><strong>To Infrastructure Endpoints:</strong> Minimal technical data required to load resources (HTTP requests for images, scripts, fonts)</li>
             </ul>
             
             <p><strong>Purpose of Data Transmission:</strong></p>
             <ul>
-                <li>Ad endpoints: Display personalized or non-personalized advertisements to support the free app</li>
-                <li>Analytics endpoints: Understand app usage, identify crashes, improve stability and user experience</li>
+                <li><strong>Ad endpoints:</strong> Display personalized or non-personalized advertisements to support the free app</li>
+                <li><strong>Analytics endpoints:</strong> Understand app usage, identify crashes, improve stability and user experience</li>
+                <li><strong>Consent endpoints:</strong> Obtain, store, and respect your privacy preferences; comply with GDPR, CCPA, and other privacy laws</li>
+                <li><strong>Infrastructure endpoints:</strong> Load necessary resources (UI elements, images, scripts) for ads and consent dialogs to function</li>
             </ul>
             
             <p><strong>Encryption:</strong> All data transmission to these endpoints is encrypted using HTTPS/TLS protocols.</p>
