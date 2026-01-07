@@ -133,6 +133,19 @@
             <strong>Summary:</strong> Root Checker is a utility app that checks if your Android device is rooted. We use Google AdMob to display ads and Firebase Analytics to understand app usage. While WE don't directly collect or store your data, our third-party partners (Google) do collect certain information as described in this policy. The root checking functionality works locally on your device.
         </div>
 
+        <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b; margin: 20px 0;">
+            <h3 style="color: #92400e; margin-top: 0;">🚫 Your Right to Opt-Out of Data "Sale"</h3>
+            <p><strong>Under state privacy laws (California CCPA, Virginia VCDPA, Colorado CPA, Connecticut CTDPA, Utah UCPA), you have the RIGHT to opt-out of the "sale" or "sharing" of your personal data.</strong></p>
+            <p><strong>What "Sale" Means:</strong> Under these laws, "sale" has a broad definition. When we share your Advertising ID and device information with Google AdMob for personalized advertising, this may qualify as a "sale" even though no money is directly exchanged with you.</p>
+            <p><strong>How to Opt-Out (3 Easy Ways):</strong></p>
+            <ol style="margin: 10px 0;">
+                <li><strong>In-App (Recommended):</strong> Open Root Checker → Privacy Settings → Enable "Do Not Sell My Personal Information" toggle</li>
+                <li><strong>Device Settings:</strong> Android Settings → Google → Ads → Delete advertising ID</li>
+                <li><strong>Email Request:</strong> Send email to pyrbit0supp@gmail.com with subject "CCPA Opt-Out"</li>
+            </ol>
+            <p><strong>No Discrimination:</strong> You can still use Root Checker fully if you opt-out. You'll see non-personalized ads instead of personalized ads. See Section 10.2 for full details.</p>
+        </div>
+
         <h2>1. Introduction</h2>
         <p>Welcome to Root Checker ("App", "we", "our", or "us"). We are committed to protecting your privacy and being transparent about data collection. This Privacy Policy explains our practices and those of our third-party service providers regarding data collection and usage for our Android application.</p>
         <p><strong>Important:</strong> While we (Root Checker developers) don't directly collect personal data, our integrated third-party services (Google AdMob and Firebase Analytics) do collect certain information as described below.</p>
@@ -142,6 +155,93 @@
             <strong>We (Root Checker developers) do not directly collect or store personal information.</strong> However, our third-party service providers (Google) collect data as described below.
         </div>
         
+        <h3>2.0 Complete Data Types Summary</h3>
+        <p>This section provides a comprehensive list of ALL data types that may be collected through Root Checker, including data collected automatically by Google AdMob and Firebase SDKs. This ensures complete transparency about our data practices:</p>
+        
+        <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+            <p><strong>📊 All Data Types Collected (Comprehensive List):</strong></p>
+            <ul>
+                <li><strong>Device Identifiers:</strong>
+                    <ul>
+                        <li>Advertising ID (Google Advertising ID / GAID)</li>
+                        <li>Firebase Instance ID (app installation identifier)</li>
+                        <li>App Set ID (limited-scope identifier for analytics)</li>
+                    </ul>
+                </li>
+                <li><strong>Location Data:</strong>
+                    <ul>
+                        <li>Approximate location (country/region derived from IP address only)</li>
+                        <li>NO precise GPS location collected</li>
+                    </ul>
+                </li>
+                <li><strong>App Activity & Interactions:</strong>
+                    <ul>
+                        <li>Screen views (which screens you view in the app)</li>
+                        <li>Button clicks and tap interactions</li>
+                        <li>Root check executions (number of times you check for root)</li>
+                        <li>App opens and session duration</li>
+                        <li>Feature usage patterns</li>
+                    </ul>
+                </li>
+                <li><strong>App Performance Data:</strong>
+                    <ul>
+                        <li>Crash logs and stack traces</li>
+                        <li>App launch time and performance metrics</li>
+                        <li>Error reports and diagnostics</li>
+                        <li>ANR (App Not Responding) reports</li>
+                    </ul>
+                </li>
+                <li><strong>Device Information:</strong>
+                    <ul>
+                        <li>Device manufacturer and model (e.g., "Samsung Galaxy S23")</li>
+                        <li>Operating system and version (e.g., "Android 14")</li>
+                        <li>Screen resolution and size</li>
+                        <li>Device language and locale settings</li>
+                        <li>Network carrier name</li>
+                        <li>Time zone</li>
+                    </ul>
+                </li>
+                <li><strong>Network & Connection Data:</strong>
+                    <ul>
+                        <li>IP address</li>
+                        <li>Network type (WiFi, 4G, 5G, etc.)</li>
+                        <li>Connection status</li>
+                    </ul>
+                </li>
+                <li><strong>Advertising Data:</strong>
+                    <ul>
+                        <li>Ad impressions (ads shown to you)</li>
+                        <li>Ad clicks</li>
+                        <li>Ad interaction time</li>
+                        <li>Ad conversion data (if applicable)</li>
+                    </ul>
+                </li>
+                <li><strong>App Info:</strong>
+                    <ul>
+                        <li>App version (e.g., "1.1")</li>
+                        <li>App package name (com.rootchecker.app)</li>
+                        <li>First install date</li>
+                        <li>Last update date</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p><strong>❌ Data Types NOT Collected:</strong></p>
+            <ul>
+                <li>Name, email, phone number, or any personal identifiers</li>
+                <li>Precise GPS location or location history</li>
+                <li>Contacts, calendar, or communication data</li>
+                <li>Photos, videos, audio, or other media files</li>
+                <li>Files and documents on your device</li>
+                <li>Browsing history or web data</li>
+                <li>SMS or call logs</li>
+                <li>Biometric data (fingerprint, face data)</li>
+                <li>Health or fitness information</li>
+                <li>Financial or payment information</li>
+            </ul>
+        </div>
+        
+        <h3>2.1 Detailed Data Collection by Category</h3>
         <table>
             <tr>
                 <th>Data Type</th>
@@ -226,17 +326,56 @@
         <p><strong>All these checks are performed locally on your device.</strong> No information is sent anywhere.</p>
 
         <h2>4. Permissions</h2>
-        <p>Root Checker requests the following permissions:</p>
+        <p>Root Checker requests the following permissions to function properly. We are committed to transparency about why each permission is needed:</p>
+        
+        <h3>4.1 Permissions Requested</h3>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Required?</th>
+            </tr>
+            <tr>
+                <td><strong>INTERNET</strong></td>
+                <td>Required for displaying advertisements (AdMob) and sending analytics data (Firebase) to Google servers. Without this permission, ads cannot load and analytics cannot be transmitted.</td>
+                <td>✓ Yes</td>
+            </tr>
+            <tr>
+                <td><strong>ACCESS_NETWORK_STATE</strong></td>
+                <td>Required to check if your device is online before attempting to load ads. This prevents unnecessary errors and improves app performance by only loading ads when internet is available.</td>
+                <td>✓ Yes</td>
+            </tr>
+            <tr>
+                <td><strong>AD_ID</strong><br>(com.google.android.gms.permission.AD_ID)</td>
+                <td><strong>Android 13+ Requirement:</strong> This permission is required on Android 13 (API level 33) and above to access your Advertising ID for personalized advertising. This permission allows Google AdMob to identify your device for ad targeting and frequency capping. You can opt-out of personalized ads in Settings (see Section 10).</td>
+                <td>✓ Yes (Android 13+)</td>
+            </tr>
+        </table>
+        
+        <h3>4.2 Why AD_ID Permission is Needed (Android 13+)</h3>
+        <p>Starting with Android 13, Google requires apps to explicitly declare the AD_ID permission to access the Advertising ID. Here's what this means for you:</p>
         <ul>
-            <li><strong>INTERNET:</strong> Required for displaying ads and sending analytics data to Google servers</li>
-            <li><strong>ACCESS_NETWORK_STATE:</strong> Required to check if device is online before loading ads</li>
+            <li><strong>What it does:</strong> Allows the app to access your device's Advertising ID (a unique identifier for advertising purposes)</li>
+            <li><strong>Why we need it:</strong> Required for Google AdMob to display advertisements that support the free app</li>
+            <li><strong>Your control:</strong> You can opt-out of personalized ads at any time:
+                <ul>
+                    <li>Android Settings → Google → Ads → Delete advertising ID</li>
+                    <li>Or through the app's Privacy Settings → "Do Not Sell My Personal Information"</li>
+                </ul>
+            </li>
+            <li><strong>What happens if you opt-out:</strong> You'll still see ads, but they will be non-personalized (generic ads not based on your interests)</li>
         </ul>
-        <p><strong>Permissions NOT requested:</strong></p>
+        
+        <h3>4.3 Permissions NOT Requested</h3>
+        <p><strong>We do NOT request the following sensitive permissions:</strong></p>
         <ul>
-            <li><strong>No Storage Permission:</strong> We don't access your files or photos</li>
-            <li><strong>No Camera/Microphone:</strong> We don't access any sensors</li>
-            <li><strong>No Location:</strong> We don't request GPS or precise location</li>
-            <li><strong>No Contacts:</strong> We don't access your contacts</li>
+            <li><strong>No Storage Permission:</strong> We don't access your files, photos, or media</li>
+            <li><strong>No Camera/Microphone:</strong> We don't access your camera or record audio</li>
+            <li><strong>No Location (GPS):</strong> We don't request precise location access (only approximate country-level location is derived from IP address by Google)</li>
+            <li><strong>No Contacts:</strong> We don't access your contact list</li>
+            <li><strong>No Phone/SMS:</strong> We don't access your phone calls or text messages</li>
+            <li><strong>No Calendar:</strong> We don't access your calendar</li>
+            <li><strong>No Sensors:</strong> We don't access biometric sensors, health data, or fitness information</li>
         </ul>
 
         <h2>5. Data Storage and Retention</h2>
@@ -284,6 +423,44 @@
         </ul>
 
         <h2>7. Third-Party Services - Detailed Information</h2>
+        
+        <h3>7.0 Data Transmission Endpoints (URLs)</h3>
+        <p>Root Checker transmits data to the following third-party endpoints/domains for advertising and analytics purposes. All data transmission is performed by Google's SDKs (AdMob and Firebase) integrated into the app:</p>
+        
+        <div class="info-box">
+            <p><strong>Google AdMob Endpoints (Advertising):</strong></p>
+            <ul>
+                <li><strong>googleads.g.doubleclick.net</strong> - Ad serving and delivery</li>
+                <li><strong>pagead2.googlesyndication.com</strong> - AdMob ad requests and responses</li>
+                <li><strong>adservice.google.com</strong> - Ad configuration and targeting</li>
+                <li><strong>*.gvt1.com</strong> - Google video technology (video ads)</li>
+            </ul>
+            
+            <p><strong>Firebase Analytics & Crashlytics Endpoints:</strong></p>
+            <ul>
+                <li><strong>firebaselogging-pa.googleapis.com</strong> - Analytics event logging</li>
+                <li><strong>app-measurement.com</strong> - Firebase Analytics data collection</li>
+                <li><strong>firebase-settings.crashlytics.com</strong> - Crash report configuration</li>
+                <li><strong>crashlyticsreports-pa.googleapis.com</strong> - Crash report uploads</li>
+                <li><strong>firebaseinstallations.googleapis.com</strong> - Firebase instance ID management</li>
+            </ul>
+            
+            <p><strong>What Data is Sent to These Endpoints:</strong></p>
+            <ul>
+                <li><strong>To Ad Endpoints:</strong> Advertising ID, IP address, device model, OS version, ad interaction data (clicks, views), general location (from IP)</li>
+                <li><strong>To Analytics Endpoints:</strong> Instance ID, app events (screen views, button clicks), session duration, device info, app version, crash logs</li>
+            </ul>
+            
+            <p><strong>Purpose of Data Transmission:</strong></p>
+            <ul>
+                <li>Ad endpoints: Display personalized or non-personalized advertisements to support the free app</li>
+                <li>Analytics endpoints: Understand app usage, identify crashes, improve stability and user experience</li>
+            </ul>
+            
+            <p><strong>Encryption:</strong> All data transmission to these endpoints is encrypted using HTTPS/TLS protocols.</p>
+            
+            <p><strong>Your Control:</strong> You can limit data transmission by opting out of personalized ads (affects ad endpoints) or disabling analytics (affects analytics endpoints) through the app's Privacy Settings or device settings.</p>
+        </div>
         
         <h3>7.1 Google AdMob</h3>
         <p>We display advertisements through Google AdMob to support the free version of our app. AdMob collects and processes:</p>
@@ -441,17 +618,33 @@
             <li><strong>Right to Lodge a Complaint:</strong> File complaint with your data protection authority</li>
         </ul>
 
-        <h3>10.2 Rights for California Residents (CCPA/CPRA)</h3>
+        <h3>10.2 Rights for California Residents (CCPA/CPRA) and Other State Privacy Laws</h3>
+        <p><strong>Applies to:</strong> California (CCPA/CPRA), Virginia (VCDPA - Virginia Consumer Data Protection Act), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), and other states with consumer privacy laws.</p>
+        
+        <p><strong>Virginia Residents:</strong> Under the Virginia Consumer Data Protection Act (VCDPA), you have specific rights regarding your personal data as outlined below. These rights are similar to CCPA but with some Virginia-specific provisions.</p>
+        
+        <p><strong>Your Rights Include:</strong></p>
         <ul>
             <li><strong>Right to Know:</strong> What personal information is collected, used, shared, or sold</li>
             <li><strong>Right to Delete:</strong> Request deletion of your personal information</li>
-            <li><strong>Right to Opt-Out:</strong> Opt-out of the "sale" or "sharing" of personal information</li>
+            <li><strong>Right to Opt-Out of Sale/Sharing:</strong> Opt-out of the "sale" or "sharing" of personal information for targeted advertising</li>
             <li><strong>Right to Correction:</strong> Correct inaccurate personal information</li>
             <li><strong>Right to Limit Use:</strong> Limit use of sensitive personal information</li>
             <li><strong>Right to Non-Discrimination:</strong> Not be discriminated against for exercising rights</li>
         </ul>
 
-        <p><strong>Do Not Sell or Share My Personal Information:</strong> While we don't directly sell data, sharing with AdMob may constitute a "sale" under CCPA. California residents have multiple ways to opt-out:</p>
+        <h4 style="color: #dc2626; margin-top: 20px;">🚫 Right to Opt-Out of "Sale" - Detailed Explanation</h4>
+        
+        <p><strong>What Constitutes a "Sale" Under State Privacy Laws:</strong></p>
+        <ul>
+            <li>Under CCPA and similar state laws, "sale" means sharing personal information with third parties for valuable consideration</li>
+            <li>This has a <strong>broad definition</strong> - it includes sharing data for targeted/personalized advertising, even if no direct payment occurs</li>
+            <li><strong>In Root Checker:</strong> When we share your Advertising ID, IP address, and device info with Google AdMob for personalized ads, this MAY constitute a "sale" under these laws</li>
+            <li>We do NOT sell your data in the traditional sense (no one buys a list of user information from us)</li>
+            <li>However, the legal definition is broad enough to potentially include ad personalization data sharing</li>
+        </ul>
+        
+        <p><strong>YOU HAVE THE RIGHT TO OPT-OUT.</strong> California residents and residents of other states with similar laws have multiple ways to exercise this right:</p>
         
         <p><strong>Option 1 - In-App (Recommended):</strong></p>
         <ol>
@@ -500,6 +693,34 @@
             <li>Right to delete personal information</li>
             <li>Right to withdraw consent</li>
         </ul>
+
+        <h3>10.6 Rights Under U.S. State Privacy Laws</h3>
+        <p>If you are a resident of California, Virginia, Colorado, Connecticut, Utah, or other U.S. states with comprehensive privacy laws, you have the following rights:</p>
+        
+        <p><strong>Right to Opt-Out of "Sale" or "Sharing" for Targeted Advertising:</strong></p>
+        <ul>
+            <li><strong>California (CCPA/CPRA):</strong> Right to opt-out of sale of personal information</li>
+            <li><strong>Virginia (VCDPA - Virginia Consumer Data Protection Act):</strong> Right to opt-out of sale and targeted advertising; right to opt-out of profiling in furtherance of automated decisions</li>
+            <li><strong>Colorado (CPA):</strong> Right to opt-out of sale for targeted advertising</li>
+            <li><strong>Connecticut (CTDPA):</strong> Right to opt-out of sale and targeted advertising</li>
+            <li><strong>Utah (UCPA):</strong> Right to opt-out of sale of personal data</li>
+        </ul>
+        
+        <p><strong>Virginia Residents - VCDPA Specific Rights:</strong></p>
+        <ul>
+            <li><strong>Right to Access:</strong> Confirm whether we are processing your personal data and access such data</li>
+            <li><strong>Right to Correction:</strong> Correct inaccuracies in your personal data</li>
+            <li><strong>Right to Deletion:</strong> Delete personal data provided by or obtained about you</li>
+            <li><strong>Right to Data Portability:</strong> Obtain a copy of your personal data in a portable format</li>
+            <li><strong>Right to Opt-Out:</strong> Opt-out of targeted advertising, sale of personal data, and profiling</li>
+            <li><strong>Right to Appeal:</strong> Appeal our decision regarding your consumer rights request</li>
+        </ul>
+        
+        <p><strong>To Exercise Virginia VCDPA Rights:</strong> Virginia residents can use any of the opt-out methods in Section 10.2 above, or email us at pyrbit0supp@gmail.com with subject "VCDPA Request - Virginia Resident"</p>
+        
+        <p><strong>What This Means for Root Checker Users:</strong> Under these laws, our sharing of your Advertising ID and related data with Google AdMob for personalized advertising may be considered a "sale" or "sharing" for targeted advertising purposes. <strong>You have the legal right to opt-out of this activity.</strong></p>
+        
+        <p><strong>How to Exercise This Right:</strong> Use any of the 3 opt-out methods described in Section 10.2 above. Your opt-out will be honored regardless of which state you reside in.</p>
 
         <h3>How to Exercise Your Rights</h3>
         <p>To exercise any of these rights, email us at: <strong>pyrbit0supp@gmail.com</strong> with:</p>
@@ -578,26 +799,53 @@
         <div class="contact">
             <h2>14. Contact Us & Data Protection Officer</h2>
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your personal data, or wish to exercise your rights, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:pyrbit0supp@gmail.com">pyrbit0supp@gmail.com</a></p>
-            <p><strong>Developer:</strong> Alok Ranjan</p>
+            
+            <h3 style="color: #6750A4; margin-top: 20px;">📧 General Contact Information</h3>
+            <p><strong>Developer/App Publisher:</strong> Alok Ranjan</p>
             <p><strong>App Name:</strong> Root Checker</p>
+            <p><strong>Email:</strong> <a href="mailto:pyrbit0supp@gmail.com">pyrbit0supp@gmail.com</a></p>
             <p><strong>Response Time:</strong> We aim to respond within 48-72 hours (30 days for formal data requests)</p>
             
-            <p><strong>For Privacy Rights Requests:</strong></p>
+            <h3 style="color: #6750A4; margin-top: 20px;">🛡️ Data Protection Officer (DPO)</h3>
+            <p>As required by GDPR Article 13(1)(b), Article 14(1)(b), PIPA, and POPIA, we have designated a Data Protection Officer to handle privacy-related inquiries and ensure compliance with data protection regulations.</p>
+            
+            <p><strong>DPO Name:</strong> Alok Ranjan (Developer & Data Protection Officer)</p>
+            <p><strong>DPO Role:</strong> Data Protection Officer</p>
+            <p><strong>DPO Email:</strong> <a href="mailto:pyrbit0supp@gmail.com">pyrbit0supp@gmail.com</a></p>
+            <p><strong>Subject Line for DPO Inquiries:</strong> "DPO - Privacy Inquiry"</p>
+            
+            <p><strong>What the DPO Can Help With:</strong></p>
             <ul>
-                <li>GDPR Requests: Subject line "GDPR Request"</li>
-                <li>CCPA Requests: Subject line "CCPA Request"</li>
-                <li>Data Deletion: Subject line "Delete My Data"</li>
-                <li>General Privacy: Subject line "Privacy Inquiry"</li>
+                <li>Answer questions about how your personal data is processed</li>
+                <li>Assist with exercising your privacy rights (access, deletion, correction, opt-out)</li>
+                <li>Address privacy concerns or complaints</li>
+                <li>Provide information about data retention and security measures</li>
+                <li>Facilitate communication with regulatory authorities if needed</li>
+            </ul>
+            
+            <p><strong>Response Commitment:</strong> The DPO will respond to your inquiry within 30 days as required by GDPR and other applicable privacy laws. For urgent matters, please mark your email as "Urgent - Privacy Rights."</p>
+            
+            <h3 style="color: #6750A4; margin-top: 20px;">📋 For Privacy Rights Requests</h3>
+            <p>To exercise your privacy rights, contact our DPO using the email above with the appropriate subject line:</p>
+            <ul>
+                <li><strong>GDPR Requests:</strong> Subject line "DPO - GDPR Request"</li>
+                <li><strong>CCPA Requests:</strong> Subject line "DPO - CCPA Request"</li>
+                <li><strong>PIPA Requests:</strong> Subject line "DPO - PIPA Request" (South Korea)</li>
+                <li><strong>POPIA Requests:</strong> Subject line "DPO - POPIA Request" (South Africa)</li>
+                <li><strong>Data Deletion:</strong> Subject line "DPO - Delete My Data"</li>
+                <li><strong>Data Access:</strong> Subject line "DPO - Data Access Request"</li>
+                <li><strong>General Privacy:</strong> Subject line "DPO - Privacy Inquiry"</li>
             </ul>
 
-            <p><strong>Regulatory Authorities:</strong></p>
+            <h3 style="color: #6750A4; margin-top: 20px;">🏛️ Regulatory Authorities</h3>
+            <p>If you are not satisfied with our response to your privacy concerns, you have the right to lodge a complaint with the relevant data protection authority in your jurisdiction:</p>
             <ul>
-                <li><strong>EU/EEA:</strong> Contact your local Data Protection Authority</li>
+                <li><strong>EU/EEA:</strong> Contact your local Data Protection Authority (<a href="https://edpb.europa.eu/about-edpb/board/members_en" target="_blank">Find your DPA</a>)</li>
                 <li><strong>California:</strong> California Attorney General - <a href="https://oag.ca.gov/privacy" target="_blank">Privacy Enforcement</a></li>
                 <li><strong>UK:</strong> Information Commissioner's Office (ICO) - <a href="https://ico.org.uk" target="_blank">ico.org.uk</a></li>
-                <li><strong>Brazil:</strong> Autoridade Nacional de Proteção de Dados (ANPD)</li>
+                <li><strong>Brazil:</strong> Autoridade Nacional de Proteção de Dados (ANPD) - <a href="https://www.gov.br/anpd" target="_blank">gov.br/anpd</a></li>
                 <li><strong>South Africa:</strong> Information Regulator - <a href="https://inforegulator.org.za" target="_blank">inforegulator.org.za</a></li>
+                <li><strong>South Korea:</strong> Personal Information Protection Commission (PIPC) - <a href="https://www.pipc.go.kr/np/eng/main.do" target="_blank">pipc.go.kr</a></li>
             </ul>
         </div>
 
