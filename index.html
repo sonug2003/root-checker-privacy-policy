@@ -122,7 +122,7 @@
 <body>
     <div class="container">
         <h1>🛡️ Privacy Policy for Root Checker</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> January 3, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> January 7, 2026</p>
         
         <div class="privacy-badge">
             <h3>🔒 Third-Party Data Collection</h3>
@@ -250,10 +250,15 @@
         <p><strong>Google (AdMob & Firebase):</strong></p>
         <ul>
             <li>Stores collected data on Google's servers according to their retention policies</li>
-            <li>Analytics data: Retained for up to 14 months by default</li>
-            <li>Advertising data: Retained according to Google's advertising policies</li>
-            <li>You can request deletion through Google's privacy controls or by contacting us</li>
+            <li><strong>Analytics data (Firebase):</strong> Retained for <strong>14 months</strong> from collection date</li>
+            <li><strong>Advertising data (AdMob):</strong> Retained for <strong>13 months</strong> for personalized ads; <strong>90 days</strong> for non-personalized ads</li>
+            <li><strong>Crash logs:</strong> Retained for <strong>90 days</strong> for debugging purposes</li>
+            <li><strong>User consent records:</strong> Retained for <strong>13 months</strong> to comply with legal requirements</li>
+            <li><strong>Advertising ID:</strong> Retained until you reset it or request deletion</li>
+            <li>You can request early deletion through Google's privacy controls at <a href="https://myaccount.google.com/data-and-privacy" target="_blank">Google Privacy Controls</a> or by contacting us</li>
         </ul>
+        
+        <p><strong>Automatic Deletion:</strong> After the retention periods above, data is automatically and permanently deleted from Google's servers. You don't need to take any action.</p>
 
         <h2>6. Data Sharing and Third Parties</h2>
         <p>We share data with the following third parties:</p>
@@ -309,16 +314,48 @@
         <p><strong>Data Retention:</strong> 14 months (can be configured to 2-14 months)</p>
         <p><strong>More Info:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and Security</a></p>
 
+        <h2>7.3 Consent Management</h2>
+        <p>We use Google's User Messaging Platform (UMP) to obtain and manage user consent for data collection and advertising, particularly for users in the European Economic Area (EEA) and other regions requiring explicit consent.</p>
+        
+        <p><strong>Consent Dialog:</strong> On your first app launch (after age verification), you'll see a consent dialog that:</p>
+        <ul>
+            <li>Explains what data is collected and why</li>
+            <li>Allows you to accept or decline personalized advertising</li>
+            <li>Provides options to manage your privacy preferences</li>
+            <li>Links to this privacy policy for full details</li>
+        </ul>
+        
+        <p><strong>Consent Requirements by Region:</strong></p>
+        <ul>
+            <li><strong>EEA/UK (GDPR):</strong> Explicit consent required for personalized ads and analytics</li>
+            <li><strong>California (CCPA):</strong> Right to opt-out of data "sale" (sharing with advertisers)</li>
+            <li><strong>Other Regions:</strong> Consent obtained in accordance with local laws</li>
+        </ul>
+        
+        <p><strong>Managing Your Consent:</strong> You can change your consent choices at any time through the app's Privacy Settings menu.</p>
+
         <h2>8. Children's Privacy (COPPA Compliance)</h2>
-        <p><strong>Age Restriction:</strong> Root Checker is intended for users aged 13 and above.</p>
+        <p><strong>Age Restriction:</strong> Root Checker is intended for users aged 13 and above and enforces this restriction.</p>
         
-        <p>Our app and third-party services collect persistent identifiers (Advertising ID, Instance ID) which require parental consent under COPPA when collected from children under 13.</p>
+        <h3>8.1 Age Verification</h3>
+        <p>Upon first launch, the app displays an age verification dialog requiring users to confirm they are 13 years or older.</p>
         
-        <p><strong>If Your Child Uses This App:</strong></p>
+        <p><strong>What Happens When User Indicates Under 13:</strong></p>
+        <ul>
+            <li>The app <strong>immediately closes/exits</strong> - no further access is allowed</li>
+            <li><strong>Zero data collection</strong> occurs before or during age verification</li>
+            <li>No ads are loaded or displayed to users under 13</li>
+            <li>No analytics, crash logs, or identifiers are collected from underage users</li>
+            <li>The app must be reinstalled to attempt age verification again</li>
+        </ul>
+        
+        <p>Our app and third-party services collect persistent identifiers (Advertising ID, Instance ID) which require parental consent under COPPA when collected from children under 13. By implementing strict age verification with immediate app closure, we ensure <strong>zero data is collected from children</strong> without meeting COPPA requirements.</p>
+        
+        <p><strong>If Your Child Bypassed Age Verification:</strong></p>
         <ul>
             <li>We do not knowingly collect personal information from children under 13 without parental consent</li>
-            <li>Google AdMob and Firebase have their own child-directed policies</li>
-            <li>If you believe your child has used this app and data was collected, contact us immediately at pyrbit0supp@gmail.com</li>
+            <li>Our age gate is designed to prevent access by children under 13</li>
+            <li>If you believe your child bypassed our age verification and used this app, contact us immediately at pyrbit0supp@gmail.com</li>
             <li>We will delete any information collected from children under 13 upon verified request</li>
         </ul>
 
@@ -361,7 +398,36 @@
         <p><strong>Limitation:</strong> While we strive to protect data, no method of transmission or storage is 100% secure. Use the app at your own risk.</p>
 
         <h2>10. Your Privacy Rights</h2>
-        <p>Depending on your location, you have various rights regarding your personal data:</p>
+        <p>Depending on your location, you have various rights regarding your personal data. Our app provides in-app tools to help you exercise these rights easily.</p>
+        
+        <h3>In-App Privacy Controls</h3>
+        <p>Access Privacy Settings from the app's main screen to:</p>
+        <ul>
+            <li><strong>Manage Consent:</strong> Change your data collection and advertising preferences</li>
+            <li><strong>Delete Your Data:</strong> Initiate data deletion with guided instructions</li>
+            <li><strong>Do Not Sell (CCPA):</strong> Opt-out of personalized advertising (California residents)</li>
+            <li><strong>Analytics Control:</strong> Enable or disable Firebase Analytics</li>
+            <li><strong>View Privacy Policy:</strong> Access this policy directly from the app</li>
+        </ul>
+        
+        <h3>How to Delete Your Data (In-App)</h3>
+        <p>To delete your data collected through Root Checker:</p>
+        <ol>
+            <li>Open the app and tap "Privacy Settings" from the main screen</li>
+            <li>Tap "Delete My Data"</li>
+            <li>Confirm your choice</li>
+            <li>Follow the guided instructions to:
+                <ul>
+                    <li>Reset your Advertising ID (you'll be directed to system settings)</li>
+                    <li>Clear app preferences and consent</li>
+                    <li>Delete data stored by Google (via link to Google Account privacy controls)</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <p><strong>Alternative Method:</strong> You can also request data deletion by emailing pyrbit0supp@gmail.com with subject "Delete My Data"</p>
+
+        <p>Depending on your location, you have additional legal rights regarding your personal data:</p>
 
         <h3>10.1 Rights for EU/EEA Residents (GDPR)</h3>
         <ul>
@@ -385,10 +451,26 @@
             <li><strong>Right to Non-Discrimination:</strong> Not be discriminated against for exercising rights</li>
         </ul>
 
-        <p><strong>Do Not Sell or Share My Personal Information:</strong> While we don't directly sell data, sharing with AdMob may constitute a "sale" under CCPA. To opt-out:</p>
+        <p><strong>Do Not Sell or Share My Personal Information:</strong> While we don't directly sell data, sharing with AdMob may constitute a "sale" under CCPA. California residents have multiple ways to opt-out:</p>
+        
+        <p><strong>Option 1 - In-App (Recommended):</strong></p>
+        <ol>
+            <li>Open Root Checker</li>
+            <li>Tap "Privacy Settings"</li>
+            <li>Enable the "Do Not Sell My Personal Information" toggle</li>
+            <li>Restart the app for changes to take effect</li>
+        </ol>
+        
+        <p>This will disable personalized advertising and request non-personalized ads only.</p>
+        
+        <p><strong>Option 2 - Device Settings:</strong></p>
         <ul>
-            <li>Disable ad personalization: Android Settings → Google → Ads → Delete advertising ID</li>
-            <li>Or contact us at pyrbit0supp@gmail.com with subject "CCPA Opt-Out"</li>
+            <li>Android Settings → Google → Ads → Delete advertising ID</li>
+        </ul>
+        
+        <p><strong>Option 3 - Email Request:</strong></p>
+        <ul>
+            <li>Contact us at pyrbit0supp@gmail.com with subject "CCPA Opt-Out"</li>
         </ul>
 
         <h3>10.3 Rights for Brazilian Residents (LGPD)</h3>
@@ -455,7 +537,20 @@
             <li>Google provides adequate data protection safeguards</li>
         </ul>
 
-        <p><strong>Your Consent:</strong> By using this app, you consent to the transfer of your data to countries that may have different data protection laws than your country of residence.</p>
+        <p><strong>Your Consent:</strong> By accepting the consent dialog when you first use this app, you consent to the transfer of your data to countries that may have different data protection laws than your country of residence. You can withdraw this consent at any time through Privacy Settings.</p>
+        
+        <h2>11.5 Analytics Opt-Out</h2>
+        <p>You can control Firebase Analytics data collection independently:</p>
+        
+        <p><strong>To Disable Analytics:</strong></p>
+        <ol>
+            <li>Open Privacy Settings in the app</li>
+            <li>Toggle off "Enable Analytics"</li>
+            <li>Your app usage data will no longer be collected</li>
+        </ol>
+        
+        <p>Note: Disabling analytics does not affect ads. You can disable both analytics and personalized ads independently.</p>
+        
         <h2>12. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, services, or legal requirements. Any changes will be reflected by updating the "Last Updated" date at the top of this page.</p>
         
@@ -536,22 +631,95 @@
             </tr>
         </table>
 
-        <h2>16. Consent</h2>
-        <p>By downloading, installing, and using Root Checker, you acknowledge that:</p>
+        <h2>16. Consent and User Control</h2>
+        
+        <h3>16.1 How We Obtain Consent</h3>
+        <p>Root Checker obtains your <strong>active, explicit consent</strong> through a multi-step process:</p>
+        <ol>
+            <li><strong>Age Verification:</strong> On first launch, you must actively click "Yes, I am 13 or older" (clicking "No" immediately closes the app)</li>
+            <li><strong>Consent Dialog (UMP):</strong> After age verification, you'll see a consent dialog (via Google UMP) where you must actively choose:
+                <ul>
+                    <li>"Accept" - to allow personalized advertising, or</li>
+                    <li>"Decline" or "Manage Options" - to limit data collection (see Section 16.3 below)</li>
+                </ul>
+            </li>
+            <li><strong>Privacy Settings:</strong> You can modify your consent choices anytime via the in-app Privacy Settings</li>
+        </ol>
+        
+        <p><strong>IMPORTANT - Consent is ACTIVE, Not Passive:</strong></p>
+        <ul>
+            <li>Consent is obtained ONLY through your explicit button clicks in the dialogs above</li>
+            <li>Simply using or downloading the app does NOT constitute consent</li>
+            <li>Simply viewing this privacy policy does NOT constitute consent</li>
+            <li>You must actively click "Accept" or "Yes" for consent to be valid</li>
+        </ul>
+        
+        <p>By actively clicking "Accept" in the consent dialog, you explicitly acknowledge that:</p>
         <ul>
             <li>You have read and understood this Privacy Policy</li>
-            <li>You consent to the collection and processing of data as described</li>
+            <li>You actively consent to the collection and processing of data as described</li>
             <li>You understand data is shared with Google (AdMob & Firebase)</li>
-            <li>You are at least 13 years old (or have parental consent)</li>
+            <li>You are at least 13 years old</li>
             <li>You consent to international data transfers</li>
         </ul>
-
-        <p><strong>Withdraw Consent:</strong> You can withdraw consent at any time by:</p>
+        
+        <h3>16.2 What Happens If You Decline Consent</h3>
+        <p>You have the right to decline consent for personalized advertising. Here's what happens:</p>
+        
+        <p><strong>If You Decline or Choose "Non-Personalized Ads Only":</strong></p>
+        <ul>
+            <li>✓ You can still use Root Checker fully - all features remain available</li>
+            <li>✓ You will still see advertisements (required to support the free app)</li>
+            <li>✓ Ads will be <strong>non-personalized</strong> (generic ads not based on your interests or browsing history)</li>
+            <li>✓ Your Advertising ID will NOT be used for ad targeting</li>
+            <li>✓ Firebase Analytics will still collect basic app usage data (crashes, screens viewed) for app stability</li>
+            <li>✓ No discrimination - you get the same app features as users who accept</li>
+        </ul>
+        
+        <p><strong>Non-Personalized Ads Explained:</strong></p>
+        <ul>
+            <li>These are generic advertisements shown to all users</li>
+            <li>Not based on your interests, browsing history, or personal data</li>
+            <li>May be based only on: current app content, current session, or general location (country-level from IP)</li>
+            <li>Example: Everyone using Root Checker might see the same ads, regardless of individual interests</li>
+        </ul>
+        
+        <p><strong>Complete Data Collection Opt-Out:</strong> If you want to decline ALL data collection (including analytics), you can:</p>
+        <ul>
+            <li>Disable Analytics in Privacy Settings</li>
+            <li>Use airplane mode (ads won't load, but app functions work)</li>
+            <li>Or uninstall the app if you don't accept our data practices</li>
+        </ul>
+        
+        <h3>16.3 Withdraw or Modify Consent</h3>
+        <p>You can withdraw or modify your consent at any time through multiple methods:</p>
+        
+        <p><strong>In-App (Easiest Method):</strong></p>
+        <ul>
+            <li>Open Privacy Settings from the main screen</li>
+            <li>Tap "Manage Consent Preferences" to change advertising consent</li>
+            <li>Use "Do Not Sell My Personal Information" toggle (CCPA)</li>
+            <li>Disable "Enable Analytics" to stop Firebase Analytics</li>
+            <li>Tap "Delete My Data" for complete data deletion</li>
+        </ul>
+        
+        <p><strong>Alternative Methods:</strong></p>
         <ul>
             <li>Uninstalling the app</li>
-            <li>Disabling ad personalization in device settings</li>
+            <li>Disabling ad personalization in device settings (Android Settings → Google → Ads)</li>
             <li>Resetting your Advertising ID</li>
-            <li>Contacting us to request data deletion</li>
+            <li>Contacting us at pyrbit0supp@gmail.com</li>
+        </ul>
+        
+        <p><strong>Effect of Withdrawal:</strong> If you withdraw consent for personalized advertising, you will still see ads, but they will be <strong>non-personalized</strong>.</p>
+        
+        <p><strong>Non-Personalized Ads Mean:</strong></p>
+        <ul>
+            <li>Ads shown are the same generic advertisements for all users</li>
+            <li>Not targeted based on your personal interests, search history, or app usage</li>
+            <li>May only use: app content context ("this is a root checker app"), session data ("user is currently active"), or general location (country-level)</li>
+            <li>Your Advertising ID is NOT used for ad selection</li>
+            <li>Still generate revenue to support the free app, but less effective than personalized ads</li>
         </ul>
 
         <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
