@@ -122,7 +122,7 @@
 <body>
     <div class="container">
         <h1>🛡️ Privacy Policy for Root Checker</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> January 7, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> January 12, 2026</p>
         
         <div class="privacy-badge">
             <h3>🔒 Third-Party Data Collection</h3>
@@ -448,6 +448,21 @@
                 <td>✓ Yes</td>
             </tr>
             <tr>
+                <td><strong>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</strong></td>
+                <td><strong>Analytics Requirement:</strong> Used by Firebase Analytics to attribute app installs to specific campaigns (e.g., knowing if you installed via an ad).</td>
+                <td>✓ Yes (Merged by Library)</td>
+            </tr>
+            <tr>
+                <td><strong>android.permission.WAKE_LOCK</strong></td>
+                <td><strong>System Requirement:</strong> Used by Google Play Services to keep the processor from sleeping while processing critical background tasks (like analytics upload or ad config).</td>
+                <td>✓ Yes (Merged by Library)</td>
+            </tr>
+            <tr>
+                <td><strong>com.google.android.c2dm.permission.RECEIVE</strong></td>
+                <td><strong>Notification/Config Requirement:</strong> Used by Firebase to receive configuration updates and push notifications (if applicable) for app reliability.</td>
+                <td>✓ Yes (Merged by Library)</td>
+            </tr>
+            <tr>
                 <td><strong>ACCESS_NETWORK_STATE</strong></td>
                 <td>Required to check if your device is online before attempting to load ads. This prevents unnecessary errors and improves app performance by only loading ads when internet is available.</td>
                 <td>✓ Yes</td>
@@ -539,8 +554,11 @@
             <ul>
                 <li><strong>googleads.g.doubleclick.net</strong> - Ad serving and delivery</li>
                 <li><strong>pagead2.googlesyndication.com</strong> - AdMob ad requests and responses</li>
+                <li><strong>tpc.googlesyndication.com</strong> - SafeFrame ad rendering and verification</li>
+                <li><strong>www.googleadservices.com</strong> - Ad conversion, tracking, and services</li>
                 <li><strong>adservice.google.com</strong> - Ad configuration and targeting</li>
-                <li><strong>*.gvt1.com</strong> - Google video technology (video ads)</li>
+                <li><strong>*.gvt1.com</strong> / <strong>*.gvt2.com</strong> - Google video technology (video ads playback)</li>
+                <li><strong>safebrowsing.googleapis.com</strong> - Security and malware protection (Safe Browsing)</li>
             </ul>
             
             <p><strong>Firebase Analytics & Crashlytics Endpoints:</strong></p>
@@ -550,6 +568,8 @@
                 <li><strong>firebase-settings.crashlytics.com</strong> - Crash report configuration</li>
                 <li><strong>crashlyticsreports-pa.googleapis.com</strong> - Crash report uploads</li>
                 <li><strong>firebaseinstallations.googleapis.com</strong> - Firebase instance ID management</li>
+                <li><strong>www.google-analytics.com</strong> - Legacy analytics collection endpoint</li>
+                <li><strong>play.googleapis.com</strong> - Google Play services logging and configuration</li>
             </ul>
             
             <p><strong>User Messaging Platform (UMP) / Consent Endpoints:</strong></p>
