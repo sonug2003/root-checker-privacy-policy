@@ -146,7 +146,7 @@
 <body>
     <div class="container">
         <h1>🛡️ Privacy Policy for Root Checker</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> January 12, 2026</p>
+        <p class="last-updated"><strong>Last Updated:</strong> January 13, 2026</p>
 
         <div class="privacy-badge">
             <h3>🔒 Third-Party Data Collection</h3>
@@ -314,11 +314,15 @@
         <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
             <p><strong>📊 All Data Types Collected (Comprehensive List):</strong></p>
             <ul>
-                <li><strong>Device Identifiers:</strong>
+                <li><strong>Device or Other IDs (Primary Data Type):</strong>
                     <ul>
-                        <li>Advertising ID (Google Advertising ID / GAID)</li>
-                        <li>Firebase Instance ID (app installation identifier)</li>
-                        <li>App Set ID (limited-scope identifier for analytics)</li>
+                        <li><strong>Advertising ID (GAID):</strong> Google Advertising ID used for ad personalization and frequency capping (resettable in Settings)</li>
+                        <li><strong>Android ID:</strong> Device-specific identifier for analytics and app attribution</li>
+                        <li><strong>Firebase Instance ID:</strong> Unique app installation identifier for Firebase Analytics</li>
+                        <li><strong>App Set ID:</strong> Limited-scope identifier for analytics across app updates (privacy-preserving)</li>
+                        <li><strong>Privacy Sandbox Ad ID:</strong> Privacy-preserving ad identifier on Android 14+ (ACCESS_ADSERVICES_AD_ID)</li>
+                        <li><strong>Purpose:</strong> Advertising, analytics, fraud prevention, crash reporting, app attribution</li>
+                        <li><strong>Your Control:</strong> You can reset/delete these IDs via Android Settings → Privacy → Ads or in-app Privacy Settings</li>
                     </ul>
                 </li>
                 <li><strong>Location Data:</strong>
@@ -404,10 +408,10 @@
                 <th>Details</th>
             </tr>
             <tr>
-                <td>Advertising ID</td>
+                <td><strong>Device or Other IDs</strong></td>
                 <td>✓ Yes</td>
                 <td>Google AdMob & Firebase</td>
-                <td>Used for personalized ads and analytics</td>
+                <td>Advertising ID, Android ID, Instance ID, App Set ID, Privacy Sandbox IDs - used for ads, analytics, fraud prevention</td>
             </tr>
             <tr>
                 <td>IP Address</td>
@@ -467,6 +471,67 @@
             <li><strong>First Opens:</strong> When the app is first launched</li>
             <li><strong>Geographic Data:</strong> Country-level location from IP address</li>
         </ul>
+        
+        <h3>2.3 Device or Other IDs - Complete Disclosure</h3>
+        <div class="info-box" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+            <p><strong>📱 What "Device or Other IDs" Means:</strong></p>
+            <p>This is a data type category required by Google Play's Data Safety form. It refers to unique identifiers associated with your device or app installation. Root Checker collects the following IDs:</p>
+            
+            <table style="margin: 15px 0; font-size: 0.9em;">
+                <tr>
+                    <th>ID Type</th>
+                    <th>What It Is</th>
+                    <th>Purpose</th>
+                    <th>Can You Reset It?</th>
+                </tr>
+                <tr>
+                    <td><strong>Advertising ID (GAID)</strong></td>
+                    <td>Google's advertising identifier unique to your device</td>
+                    <td>Personalized ads, ad frequency capping, ad measurement</td>
+                    <td>✓ Yes - Settings → Privacy → Ads</td>
+                </tr>
+                <tr>
+                    <td><strong>Android ID</strong></td>
+                    <td>Device-specific identifier assigned by Android OS</td>
+                    <td>Analytics, app attribution, fraud detection</td>
+                    <td>✓ Yes - Factory reset or app reinstall</td>
+                </tr>
+                <tr>
+                    <td><strong>Firebase Instance ID</strong></td>
+                    <td>Unique identifier for this app installation</td>
+                    <td>Firebase Analytics, crash reporting, app sessions</td>
+                    <td>✓ Yes - Uninstall and reinstall app</td>
+                </tr>
+                <tr>
+                    <td><strong>App Set ID</strong></td>
+                    <td>Identifier that persists across app updates (not across reinstalls)</td>
+                    <td>Analytics continuity when you update the app</td>
+                    <td>✓ Yes - Uninstall app</td>
+                </tr>
+                <tr>
+                    <td><strong>Privacy Sandbox Ad ID</strong></td>
+                    <td>Privacy-preserving ad identifier (Android 14+)</td>
+                    <td>Privacy-friendly advertising without cross-app tracking</td>
+                    <td>✓ Yes - Settings → Privacy → Ads</td>
+                </tr>
+            </table>
+            
+            <p><strong>Important Clarifications:</strong></p>
+            <ul style="line-height: 1.8;">
+                <li><strong>NOT Collected:</strong> IMEI, Serial Number, SIM card info, MAC address, or any hardware IDs</li>
+                <li><strong>Not Personally Identifiable:</strong> These IDs do NOT reveal your name, email, phone number, or identity</li>
+                <li><strong>Purpose-Limited:</strong> Used ONLY for advertising and analytics, NOT sold to third parties for other purposes</li>
+                <li><strong>Resettable:</strong> You can reset/delete all advertising IDs at any time</li>
+                <li><strong>Opt-Out Available:</strong> You can opt-out of personalized ads while still using the app</li>
+            </ul>
+            
+            <p><strong>How to Control Device IDs:</strong></p>
+            <ol style="line-height: 1.8;">
+                <li><strong>In-App:</strong> Open Privacy Settings → Enable "Do Not Sell My Personal Information"</li>
+                <li><strong>Android Settings:</strong> Settings → Privacy → Ads → Delete advertising ID</li>
+                <li><strong>Reset All IDs:</strong> Uninstall and reinstall Root Checker</li>
+            </ol>
+        </div>
 
         <h2>3. How the App Works</h2>
         <p>Root Checker performs local device checks to determine if your Android device has root access. Here's what
@@ -485,6 +550,8 @@
             why each permission is needed:</p>
 
         <h3>4.1 Permissions Requested</h3>
+        <p><strong>Complete Permission List:</strong> Below is every permission declared in Root Checker's manifest, including those automatically added by Google's SDKs (AdMob, Firebase, Play Services). We are committed to full transparency about why each permission is needed.</p>
+        
         <table>
             <tr>
                 <th>Permission</th>
@@ -492,25 +559,60 @@
                 <th>Required?</th>
             </tr>
             <tr>
-                <td><strong>INTERNET</strong></td>
+                <td><strong>INTERNET</strong><br><code>android.permission.INTERNET</code></td>
                 <td>Required for displaying advertisements (AdMob) and sending analytics data (Firebase) to Google
                     servers. Without this permission, ads cannot load and analytics cannot be transmitted.</td>
                 <td>✓ Yes</td>
             </tr>
             <tr>
-                <td><strong>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</strong></td>
+                <td><strong>ACCESS_NETWORK_STATE</strong><br><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                <td>Required to check if your device is online before attempting to load ads. This prevents unnecessary errors and improves app performance by only loading ads when internet is available.</td>
+                <td>✓ Yes</td>
+            </tr>
+            <tr>
+                <td><strong>AD_ID (Android 13+)</strong><br><code>com.google.android.gms.permission.AD_ID</code></td>
+                <td><strong>Android 13+ Requirement:</strong> This permission is required on Android 13 (API level 33) and above to access your Advertising ID for personalized advertising. This permission allows Google AdMob to identify your device for ad targeting and frequency capping. You can opt-out of personalized ads in Settings (see Section 10).</td>
+                <td>✓ Yes (Android 13+)</td>
+            </tr>
+            <tr>
+                <td><strong>ACCESS_ADSERVICES_AD_ID (Android 14+)</strong><br><code>android.permission.ACCESS_ADSERVICES_AD_ID</code></td>
+                <td><strong>Android Privacy Sandbox (2026 Standard):</strong> This is part of Google's new Privacy Sandbox on Android 14+ (replacing traditional ad tracking). Allows access to privacy-preserving ad IDs within the Privacy Sandbox framework. This permission enables AdMob to serve ads while protecting user privacy through on-device processing and reduced cross-app tracking. <strong>Privacy Benefit:</strong> More privacy-friendly than legacy ad tracking methods.</td>
+                <td>✓ Yes (Android 14+)</td>
+            </tr>
+            <tr>
+                <td><strong>ACCESS_ADSERVICES_ATTRIBUTION (Android 14+)</strong><br><code>android.permission.ACCESS_ADSERVICES_ATTRIBUTION</code></td>
+                <td><strong>Android Privacy Sandbox (2026 Standard):</strong> Enables privacy-preserving ad attribution (measuring if an ad led to app install/action) without revealing individual user data. This is part of the Attribution Reporting API in Privacy Sandbox, which provides aggregated, anonymized conversion reports instead of tracking individuals. <strong>What it does:</strong> Allows AdMob to measure ad effectiveness while keeping your activity private. <strong>Privacy Benefit:</strong> No individual-level tracking; only aggregated statistics.</td>
+                <td>✓ Yes (Android 14+)</td>
+            </tr>
+            <tr>
+                <td><strong>ACCESS_ADSERVICES_TOPICS (Android 14+)</strong><br><code>android.permission.ACCESS_ADSERVICES_TOPICS</code></td>
+                <td><strong>Android Privacy Sandbox (2026 Standard):</strong> Enables the Topics API, which provides interest-based advertising without cross-app tracking. Instead of tracking your browsing history, your device determines your interests (e.g., "Sports", "Technology") locally and shares only broad topic categories with advertisers. <strong>What it does:</strong> Allows relevant ads based on your interests without revealing your browsing history or identity. <strong>Privacy Benefit:</strong> Topics are generic, rotate weekly, and processed on-device; no individual tracking across apps. <strong>Your Control:</strong> You can disable this in Android Settings → Privacy → Ads.</td>
+                <td>✓ Yes (Android 14+)</td>
+            </tr>
+            <tr>
+                <td><strong>BIND_GET_INSTALL_REFERRER_SERVICE</strong><br><code>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</code></td>
                 <td><strong>Analytics Requirement:</strong> Used by Firebase Analytics to attribute app installs to
                     specific campaigns (e.g., knowing if you installed via an ad).</td>
                 <td>✓ Yes (Merged by Library)</td>
             </tr>
             <tr>
-                <td><strong>android.permission.WAKE_LOCK</strong></td>
+                <td><strong>WAKE_LOCK</strong><br><code>android.permission.WAKE_LOCK</code></td>
                 <td><strong>System Requirement:</strong> Used by Google Play Services to keep the processor from
-                    sleeping while processing critical background tasks (like analytics upload or ad config).</td>
+                    sleeping while processing critical background tasks (like analytics upload or ad config). This ensures data is reliably transmitted without interruption.</td>
                 <td>✓ Yes (Merged by Library)</td>
             </tr>
             <tr>
-                <td><strong>com.google.android.c2dm.permission.RECEIVE</strong></td>
+                <td><strong>FOREGROUND_SERVICE</strong><br><code>android.permission.FOREGROUND_SERVICE</code></td>
+                <td><strong>Background Processing:</strong> Automatically added by Android libraries (AndroidX WorkManager, Firebase) to allow background data sync and upload tasks. This ensures analytics events and crash logs are uploaded even if you close the app. <strong>Note:</strong> Root Checker does not actively run foreground services; this permission is declared by dependency libraries for their internal operations.</td>
+                <td>✓ Yes (Merged by Library)</td>
+            </tr>
+            <tr>
+                <td><strong>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</strong><br><code>com.rootchecker.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></td>
+                <td><strong>Security Enhancement (Android 13+):</strong> This is an app-defined permission that ensures broadcast receivers registered at runtime are not accessible to other apps, preventing potential security vulnerabilities. This is a security best practice on Android 13+ and does NOT collect any data. <strong>What it does:</strong> Protects internal app components from unauthorized external access. <strong>Privacy Impact:</strong> None - this is purely a security mechanism with no data collection.</td>
+                <td>✓ Yes (Android 13+)</td>
+            </tr>
+            <tr>
+                <td><strong>C2DM RECEIVE</strong><br><code>com.google.android.c2dm.permission.RECEIVE</code></td>
                 <td><strong>Notification/Config Requirement:</strong> Used by Firebase to receive configuration updates
                     and push notifications (if applicable) for app reliability.</td>
                 <td>✓ Yes (Merged by Library)</td>
@@ -531,26 +633,34 @@
                 <td><strong>android.permission.FOREGROUND_SERVICE</strong></td>
                 <td><strong>Process Management:</strong> May be automatically added by dependent libraries (like
                     AndroidX WorkManager) to ensure data sync tasks complete successfully.</td>
+                <td><strong>VIBRATE</strong><br><code>android.permission.VIBRATE</code></td>
+                <td><strong>Ad Interaction:</strong> Used by Google AdMob for interactive ad experiences (e.g., haptic feedback for video ads or gamified ads). Enhances user engagement with certain ad formats.</td>
                 <td>✓ Yes (Merged by Library)</td>
             </tr>
-
-            <tr>
-                <td><strong>ACCESS_NETWORK_STATE</strong></td>
-                <td>Required to check if your device is online before attempting to load ads. This prevents unnecessary
-                    errors and improves app performance by only loading ads when internet is available.</td>
-                <td>✓ Yes</td>
-            </tr>
-            <tr>
-                <td><strong>AD_ID</strong><br>(com.google.android.gms.permission.AD_ID)</td>
-                <td><strong>Android 13+ Requirement:</strong> This permission is required on Android 13 (API level 33)
-                    and
-                    above to access your Advertising ID for personalized advertising. This permission allows Google
-                    AdMob to
-                    identify your device for ad targeting and frequency capping. You can opt-out of personalized ads in
-                    Settings (see Section 10).</td>
-                <td>✓ Yes (Android 13+)</td>
-            </tr>
         </table>
+        
+        <div class="info-box" style="background: #ecfdf5; border-left: 4px solid #10b981; margin: 20px 0;">
+            <h4 style="color: #059669; margin-top: 0;">📱 What is Android Privacy Sandbox? (2026 Update)</h4>
+            <p><strong>Google's Privacy Sandbox on Android</strong> is a major privacy initiative introduced in Android 13+ and required for all apps by 2026. It replaces traditional ad tracking with privacy-preserving alternatives:</p>
+            <ul style="line-height: 1.8;">
+                <li><strong>Old Way (Pre-2026):</strong> Apps tracked you across different apps and websites using persistent identifiers</li>
+                <li><strong>New Way (Privacy Sandbox):</strong> Your device processes data locally and shares only anonymized, aggregated information</li>
+            </ul>
+            <p><strong>The 3 Privacy Sandbox Permissions Explained:</strong></p>
+            <ul style="line-height: 1.8;">
+                <li><strong>ACCESS_ADSERVICES_AD_ID:</strong> Privacy-friendly ad ID (not shared across apps like old tracking)</li>
+                <li><strong>ACCESS_ADSERVICES_ATTRIBUTION:</strong> Measures ad effectiveness without tracking individuals (aggregated data only)</li>
+                <li><strong>ACCESS_ADSERVICES_TOPICS:</strong> Interest-based ads without tracking your browsing history (topics like "Sports", "Tech" determined on-device)</li>
+            </ul>
+            <p><strong>Your Privacy Controls:</strong></p>
+            <ul style="line-height: 1.8;">
+                <li>Android Settings → Privacy → Ads → Delete advertising ID</li>
+                <li>Android Settings → Privacy → Ads → Opt out of Ads Personalization</li>
+                <li>Android Settings → Privacy → Ad Topics → Manage topics (view/block interest topics)</li>
+                <li>Or use Root Checker's in-app Privacy Settings</li>
+            </ul>
+            <p style="margin: 10px 0; font-size: 0.95em;"><strong>More Info:</strong> <a href="https://developer.android.com/design-for-safety/privacy-sandbox" target="_blank" style="color: #059669;">Android Privacy Sandbox Documentation</a></p>
+        </div>
 
         <h3>4.2 Why AD_ID Permission is Needed (Android 13+)</h3>
         <p>Starting with Android 13, Google requires apps to explicitly declare the AD_ID permission to access the
@@ -660,6 +770,24 @@
                 <li><strong>partner.googleadservices.com</strong> - Ad partner integrations</li>
                 <li><strong>www.google.com/pagead</strong> - Core ad services</li>
             </ul>
+            
+            <p><strong>Google Video & Media Endpoints (Video Ads):</strong></p>
+            <ul>
+                <li><strong>imasdk.googleapis.com</strong> - Interactive Media Ads SDK for video ad delivery and playback</li>
+                <li><strong>manifest.googlevideo.com</strong> - Video ad manifest files containing metadata and streaming information</li>
+                <li><strong>rr4---sn-p5qlsn6z.googlevideo.com</strong> - Google video CDN server for ad video content (pattern: rrX---sn-*.googlevideo.com where X is server number)</li>
+                <li><strong>*.googlevideo.com</strong> - Various Google video distribution servers for video ad streaming and buffering</li>
+                <li><strong>Note:</strong> Video endpoint subdomains change dynamically based on CDN routing and user location for optimal performance</li>
+            </ul>
+            
+            <p><strong>YouTube-Sourced Ad Content Endpoints:</strong></p>
+            <ul>
+                <li><strong>yt3.ggpht.com</strong> - YouTube profile pictures and channel icons displayed in video ads</li>
+                <li><strong>i.ytimg.com</strong> - YouTube thumbnail images for video ad previews and thumbnails</li>
+                <li><strong>Purpose:</strong> When AdMob serves video ads that originate from YouTube advertisers, these endpoints provide visual assets (thumbnails, icons)</li>
+                <li><strong>Important:</strong> No YouTube user account data is accessed; only publicly available ad creative assets are loaded</li>
+                <li><strong>Data Sent:</strong> No personal data is sent to these endpoints; they only serve static image files</li>
+            </ul>
 
             <p><strong>Firebase Analytics & Crashlytics Endpoints:</strong></p>
             <ul>
@@ -683,12 +811,34 @@
 
             <p><strong>Google Services & Infrastructure Endpoints:</strong></p>
             <ul>
-                <li><strong>gstatic.com</strong> (and subdomains like fonts.gstatic.com, csi.gstatic.com) - Static
-                    resources, fonts, and performance monitoring</li>
+                <li><strong>fonts.googleapis.com</strong> - Google Fonts API for rendering text in ads and consent dialogs</li>
+                <li><strong>fonts.gstatic.com</strong> - Google Fonts static files (WOFF, WOFF2, TTF font files)</li>
+                <li><strong>www.gstatic.com</strong> - Static resources (images, scripts, CSS) for Google services</li>
+                <li><strong>csi.gstatic.com</strong> - Client-Side Instrumentation for Google services performance monitoring</li>
+                <li><strong>gstatic.com</strong> - General static resources for ads, fonts, and UI elements</li>
                 <li><strong>googleusercontent.com</strong> - CDN content delivery for Google services</li>
                 <li><strong>lh3.googleusercontent.com</strong> - Image assets delivery</li>
                 <li><strong>play.google.com/log</strong> - Google Play services logging</li>
             </ul>
+            
+            <p><strong>📊 Complete Domain List (All Detected Endpoints):</strong></p>
+            <div style="background: #f0f9ff; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; font-size: 0.9em; line-height: 1.8; margin: 5px 0;">
+                    <li>✓ doubleclick.net</li>
+                    <li>✓ ggpht.com (YouTube)</li>
+                    <li>✓ googleadservices.com</li>
+                    <li>✓ googleapis.com</li>
+                    <li>✓ googlesyndication.com</li>
+                    <li>✓ googlevideo.com</li>
+                    <li>✓ gstatic.com</li>
+                    <li>✓ ytimg.com (YouTube)</li>
+                    <li>✓ googleusercontent.com</li>
+                    <li>✓ google.com</li>
+                    <li>✓ app-measurement.com</li>
+                    <li>✓ crashlytics.com</li>
+                </ul>
+                <p style="margin: 10px 0; font-size: 0.9em;"><strong>Last Updated:</strong> January 12, 2026 | <strong>Total Domains:</strong> 12 | <strong>All domains operated by Google LLC</strong></p>
+            </div>
 
             <p><strong>What Data is Sent to These Endpoints:</strong></p>
             <ul>
